@@ -51,7 +51,7 @@ const SubscriptionWidget = ({
   return chapterUser?.subscribed ? (
     <HStack justifyContent={'space-between'} width={'100%'}>
       <Text fontWeight={500}>Unfollow upcoming chapter&apos;s events</Text>
-      <Button onClick={() => chapterSubscribe(false)} size="md">
+      <Button onClick={() => chapterSubscribe(false)} size="md" width={'25%'}>
         Unsubscribe
       </Button>
     </HStack>
@@ -62,6 +62,7 @@ const SubscriptionWidget = ({
         colorScheme="blue"
         onClick={() => chapterSubscribe(true)}
         size="md"
+        width={'25%'}
       >
         Subscribe
       </Button>
@@ -84,12 +85,14 @@ const ChapterUserRoleWidget = ({
         <CheckIcon marginRight={1} />
         {chapterUser.chapter_role.name} of the chapter
       </Text>
-      <Button onClick={LeaveChapter}>Leave</Button>
+      <Button onClick={LeaveChapter} width={'25%'}>
+        Leave
+      </Button>
     </HStack>
   ) : (
     <HStack justifyContent="space-between">
       <Text fontWeight={500}>Become member of the chapter</Text>
-      <Button colorScheme="blue" onClick={JoinChapter}>
+      <Button colorScheme="blue" onClick={JoinChapter} width={'25%'}>
         Join
       </Button>
     </HStack>
